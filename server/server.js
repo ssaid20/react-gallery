@@ -8,7 +8,7 @@ app.use(express.json());
  // needed for axios requests
  app.use(bodyParser.json());
 
-const galleryRouter = require("./routes/gallery.router.js");
+const galleryRouter = require("./routes/gallery.router");
 
 /** ---------- EXPRESS ROUTES ---------- **/
 
