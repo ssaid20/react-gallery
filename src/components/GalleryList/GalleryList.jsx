@@ -20,7 +20,16 @@ function GalleryItem({ item, fetchGalleryItems }) {
         });
     };
 
-    
+    const deleteItem = () => {
+        axios.delete(`/gallery/${item.id}`)
+        .then(response => {
+            fetchGalleryItems();  // refresh gallery
+        })
+        .catch(err => {
+            alert("Error deleting item");
+            console.log(err);
+        });
+    };
 
     return (
         <div className="gallery-item">
